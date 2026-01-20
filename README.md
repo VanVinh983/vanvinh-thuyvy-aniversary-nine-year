@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 9 Years Anniversary
 
-## Getting Started
+A romantic digital love letter website built with Next.js, Three.js, and Framer Motion.
 
-First, run the development server:
+## Setup
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Install Dependencies:**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```bash
+   npm install
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Run Locally:**
+   ```bash
+   npm run dev
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Adding Photos
 
-## Learn More
+This website is designed to display 25 photos in the "Memory Gallery" section.
 
-To learn more about Next.js, take a look at the following resources:
+The photos are currently located in `public/images/` and follow a mixed naming convention (e.g., `1.JPG`, `6.jpeg`).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If you want to add more photos, you will need to:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Add the photo to `public/images/`.
+2. Update the `photos` array in `components/sections/Gallery.tsx` to include the new file.
 
-## Deploy on Vercel
+## Customization
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Milestones**: Edit `components/sections/Timeline.tsx` to change the yearly memories.
+- **Love Letter**: Edit `components/sections/LoveLetter.tsx` to change the final message.
+- **Visuals**: Tailwind theme variables are in `app/globals.css`.
