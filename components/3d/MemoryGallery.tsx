@@ -7,13 +7,52 @@ import * as THREE from "three";
 import { useImageStore } from "@/store";
 
 const memories = [
+  // 1-5: .JPG
   ...[1, 2, 3, 4, 5].map((i) => ({
     src: `/images/${i}.JPG`,
     desc: "Những ngày đầu tiên...",
   })),
-  ...Array.from({ length: 4 }, (_, i) => i + 6).map((i) => ({
+  // 6-10: .jpeg
+  ...Array.from({ length: 5 }, (_, i) => i + 6).map((i) => ({
     src: `/images/${i}.jpeg`,
     desc: "Từng chút một, mình hiểu nhau hơn.",
+  })),
+  // 11-12: .jpg
+  ...[11, 12, 13].map((i) => ({
+    src: `/images/${i}.jpg`,
+    desc: "Những khoảnh khắc bên nhau.",
+  })),
+  // 14-15: .jpg
+  ...[14, 15].map((i) => ({
+    src: `/images/${i}.jpg`,
+    desc: "Những khoảnh khắc bên nhau.",
+  })),
+  // 16-17: .jpeg
+  ...[16, 17].map((i) => ({
+    src: `/images/${i}.jpeg`,
+    desc: "Kỷ niệm ngọt ngào.",
+  })),
+  // 18-20: .JPG
+  ...[18, 19, 20].map((i) => ({
+    src: `/images/${i}.JPG`,
+    desc: "Hạnh phúc giản đơn.",
+  })),
+  // 21: .jpeg
+  { src: "/images/21.jpeg", desc: "Một tình yêu đẹp đẽ." },
+  // 22-25: .JPG
+  ...[22, 23, 24, 25].map((i) => ({
+    src: `/images/${i}.JPG`,
+    desc: "Cùng nhau lớn lên.",
+  })),
+  // 26-30: .jpg
+  ...Array.from({ length: 5 }, (_, i) => i + 26).map((i) => ({
+    src: `/images/${i}.jpg`,
+    desc: "Yêu thương mỗi ngày.",
+  })),
+  // 31-34: .jpg
+  ...Array.from({ length: 4 }, (_, i) => i + 31).map((i) => ({
+    src: `/images/${i}.jpg`,
+    desc: "9 năm bên nhau, mãi mãi yêu em.",
   })),
 ];
 

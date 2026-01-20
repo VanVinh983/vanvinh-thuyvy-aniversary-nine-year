@@ -3,38 +3,56 @@
 import { useMemo } from "react";
 import { motion } from "framer-motion";
 
-const photos = Array.from({ length: 25 }, (_, i) => i + 1).map((i) => ({
-  id: i,
-  src: `/images/${i}.JPG`, // Assuming most are .JPG, we might need to handle .jpeg extension dynamically or just standardize.
-  // For now, based on previous code, some were .jpeg. Let's try to be consistent or use a helper.
-  // However, for the 3D gallery we actuaally used .JPG.
-  // Let's stick to the user's previous pattern or just use .JPG and assume they rename or we fix it later.
-  // Based on the file view earlier: 1-5 .JPG, 6-17 .jpeg, 18-20 .JPG, 21 .jpeg, 22-25 .JPG.
-  // That's messy. Let's try to preserve the specific logic but clean the syntax.
-  alt: `Kỷ niệm ${i}`,
-}));
-
-// Actually, rewriting the array manually to match the previous specific extensions to be safe
+// Complete list of all 34 anniversary photos with correct extensions
 const photosList = [
+  // 1-5: .JPG
   ...[1, 2, 3, 4, 5].map((i) => ({
     id: i,
     src: `/images/${i}.JPG`,
     alt: `Kỷ niệm ${i}`,
   })),
-  ...Array.from({ length: 12 }, (_, i) => i + 6).map((i) => ({
+  // 6-10: .jpeg
+  ...Array.from({ length: 5 }, (_, i) => i + 6).map((i) => ({
     id: i,
     src: `/images/${i}.jpeg`,
     alt: `Kỷ niệm ${i}`,
   })),
+  // 11-15: .jpg
+  ...Array.from({ length: 5 }, (_, i) => i + 11).map((i) => ({
+    id: i,
+    src: `/images/${i}.jpg`,
+    alt: `Kỷ niệm ${i}`,
+  })),
+  // 16-17: .jpeg
+  ...[16, 17].map((i) => ({
+    id: i,
+    src: `/images/${i}.jpeg`,
+    alt: `Kỷ niệm ${i}`,
+  })),
+  // 18-20: .JPG
   ...[18, 19, 20].map((i) => ({
     id: i,
     src: `/images/${i}.JPG`,
     alt: `Kỷ niệm ${i}`,
   })),
+  // 21: .jpeg
   { id: 21, src: "/images/21.jpeg", alt: "Kỷ niệm 21" },
+  // 22-25: .JPG
   ...[22, 23, 24, 25].map((i) => ({
     id: i,
     src: `/images/${i}.JPG`,
+    alt: `Kỷ niệm ${i}`,
+  })),
+  // 26-30: .jpg
+  ...Array.from({ length: 5 }, (_, i) => i + 26).map((i) => ({
+    id: i,
+    src: `/images/${i}.jpg`,
+    alt: `Kỷ niệm ${i}`,
+  })),
+  // 31-34: .jpg
+  ...Array.from({ length: 4 }, (_, i) => i + 31).map((i) => ({
+    id: i,
+    src: `/images/${i}.jpg`,
     alt: `Kỷ niệm ${i}`,
   })),
 ];
@@ -47,7 +65,7 @@ export function Gallery() {
           Khoảnh Khắc Của Chúng Mình
         </h2>
         <p className="text-slate-400 italic">
-          25 mảnh ghép, 1 tình yêu trọn vẹn.
+          34 mảnh ghép, 1 tình yêu trọn vẹn.
         </p>
       </div>
 
