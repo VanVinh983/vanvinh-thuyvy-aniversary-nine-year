@@ -52,7 +52,10 @@ function Rig() {
 export default function MainScene() {
   return (
     <div className="fixed inset-0 z-0 pointer-events-none">
-      <Canvas camera={{ position: [0, 0, 20], fov: 45 }}>
+      <Canvas
+        camera={{ position: [0, 0, 20], fov: 45 }}
+        className="pointer-events-auto"
+      >
         <Suspense fallback={null}>
           <fog attach="fog" args={["#000000", 5, 60]} />
           <ambientLight intensity={0.2} />

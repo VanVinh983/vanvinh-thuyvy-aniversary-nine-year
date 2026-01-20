@@ -10,7 +10,7 @@ const memories = [
   // 1-5: .JPG
   ...[1, 2, 3, 4, 5].map((i) => ({
     src: `/images/${i}.JPG`,
-    desc: "Những ngày đầu tiên...",
+    desc: "Từng chút một, mình hiểu nhau hơn.",
   })),
   // 6-10: .jpeg
   ...Array.from({ length: 5 }, (_, i) => i + 6).map((i) => ({
@@ -52,7 +52,7 @@ const memories = [
   // 31-34: .jpg
   ...Array.from({ length: 4 }, (_, i) => i + 31).map((i) => ({
     src: `/images/${i}.jpg`,
-    desc: "9 năm bên nhau, mãi mãi yêu em.",
+    desc: "Mãi mãi yêu em.",
   })),
 ];
 
